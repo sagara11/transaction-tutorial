@@ -38,10 +38,12 @@ bytecode = compiled_sol["contracts"]["SimplestorageofSol.sol"]["SimpleStorage"][
 # Get api
 abi = compiled_sol["contracts"]["SimplestorageofSol.sol"]["SimpleStorage"]["abi"]
 
-# For connecting to ganache
+# For connecting to rinkeby
 
-w3 = Web3(Web3.HTTPProvider("HTTP://127.0.0.1:8545"))
-chain_id = 1337
+w3 = Web3(
+    Web3.HTTPProvider("https://rinkeby.infura.io/v3/7723014b031348d686dc1ff75338d63c")
+)
+chain_id = 4
 private_key = os.getenv("PRIVATE_KEY")
 my_address = os.getenv("MY_ADDRESS")
 
